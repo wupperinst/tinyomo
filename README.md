@@ -22,13 +22,13 @@ When we used dictionaries (actually dict of dicts) to store and lookup data in m
 
 For example, the following table shows (in a simplified way) how model variables (i.e. columns of the LP problem matrix) are stored in memory in Pyomo vs. tinyomo.
 
-![image info](tinyomo_vs_pyomo.svg)
+![image info](tinyomo_var_memory.png)
 
 Something similar (albeit more convoluted) happens for the model constraints (i.e. the equations of the model or lines of the LP problem matrix) which take up a huge amount of memory for large models in Pyomo.
 
 In the end our own anecdotal benchmark on a real model built using ITOM (see Examples) confirmed that *tinyomo beta* was more memory efficient than Pyomo but way slower, while the current version is both much faster *and* memory efficient.
 
-![image info](tinyomo_var_memory.svg)
+![image info](tinyomo_vs_pyomo.png)
 
 # Installation
 The entire module is contained in one file: 'src/tinyomo.py'. Simply add this file to your project and use the tinyomo classes to define the sets, parameters, variables, constraints, and objective of your LP problem.
