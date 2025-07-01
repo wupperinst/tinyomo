@@ -16,7 +16,7 @@ We first used a lot of Pandas dataframes to store the LP problem's elements, sim
 [^1]: https://www.joeltok.com/posts/2021-06-memory-dataframes-vs-json-like/
 
 Python dictionaries, on the other hand, are very fast to lookup because they are hash tables but they use up a lot more memory than dataframes for the same reason.[^2]
-When we used dictionaries (actually dict of dicts) to store and lookup data in memory, it significantly improved speed but memory use was back to Pyomo levels. We had to aggressively further reduce the amount of data kept in memory to achieve the current tinyomo version. We did this by eliminating as much as redundant information in input parameter data, variables, and constraints as possible.
+When we used dictionaries (actually dict of dicts) to store and lookup data in memory, it significantly improved speed but memory use was back to Pyomo levels. We had to aggressively further reduce the amount of data kept in memory to achieve the current tinyomo version. We did this by eliminating as much redundant information in input parameter data, variables, and constraints as possible.
 
 [^2]: https://stackoverflow.com/questions/513882/python-list-vs-dict-for-look-up-table
 
@@ -36,7 +36,7 @@ The entire module is contained in one file: 'src/tinyomo.py'. Simply add this fi
 # Examples
 The [ITOM framework](https://github.com/wupperinst/itom) (Industry Transformation Optimisation Model) was originally built with Pyomo and later duplicated with tinyomo.
 It provides a good comparison point of the two syntaxes.
-Actual LP problems built with ITOM modelling cost optimal future pathways for the petrochemical, steel, and cement sectors are available on [Zenodo](https://doi.org/10.5281/zenodo.15722549).
+Actual LP problems built with ITOM modelling cost optimal future pathways for the [petrochemical](https://doi.org/10.5281/zenodo.15773103), [steel](https://doi.org/10.5281/zenodo.15772719), and [cement](https://doi.org/10.5281/zenodo.15773257) sectors are available on Zenodo.
 
 # Documentation
 Documentation is coming up at [readthedocs](https://itom.readthedocs.io/en/latest/).
